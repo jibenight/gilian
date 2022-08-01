@@ -1,7 +1,27 @@
 body {
-  margin: 0;
+  margin: 0;/* marge extérieur */
 }
 
 h1 {
   margin: 0;
+}
+
+#presentation{ 
+  display: flex;
+ min-height: 100px; /* hauteur de l'élément */
+ background-color: aqua;
+ 
+}
+.centrage{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 20px;
+}
+
+#presentation img {
+
+height:200px;
+
 }
