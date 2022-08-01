@@ -1,17 +1,40 @@
 body {
   margin: 0;/* marge extérieur */
 }
+footer{
+background-color: #317AD3;
+margin: 0;
+
+}
 
 h1 {
   margin: 0;
 }
 
 #presentation{ 
-  display: flex;
- min-height: 100px; /* hauteur de l'élément */
- background-color: aqua;
+ display: flex;
+ min-height: 200px; /* hauteur de l'élément */
+ background : url('../images/back2.jpg') no-repeat center;
+ background-size: cover;
+ height : 80vh;
+ width: 100vw;
  
 }
+
+#clips{
+  padding: 30px;
+}
+
+#galerie{
+  background : url('../images/back1.jpg') no-repeat center;
+  background-size: cover;
+  height : 80vh;
+  width: 100vw;
+}
+
+
+
+
 .centrage{
   display: flex;
   text-align: center;
@@ -20,8 +43,44 @@ h1 {
   padding: 0px 20px;
 }
 
+.haut{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 50px;
+
+}
+
+.aligne{
+ display : flex;
+ justify-content: center;
+ justify-content: space-around; 
+;
+
+}
+
+.colonne{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#galerie img{
+  height:200px;
+  display: flex;
+  justify-content: space-around;
+}
+
 #presentation img {
 
-height:200px;
+height:500px;
+padding: 40px;
+display: flex;
+justify-items: center; /* ne fonctionne pas!!!! */
+
+
+
+
 
 }
