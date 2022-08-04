@@ -1,0 +1,23 @@
+footer{
+    background-color: #090f17;
+    min-height : 200px; 
+    color :white;
+    padding : 2%; 
+    
+}
+
+footer a{
+color :white;
+text-decoration: none;
+
+}
+
+#socialshare{
+display: flex;
+justify-content: center;
+}
+
+#socialshare img{
+width: 40%;
+
+}

@@ -1,28 +1,47 @@
+@font-face {
+  font-family: "altona";
+  src: url(../Fonts/AltonaSans-Regular.ttf) ;
+}
+@font-face {
+  font-family: "maverick";
+  src: url(../Fonts/MAVERICK.otf) ;
+}
+@font-face {
+  font-family: "dreaming";
+  src: url(../Fonts/Dreaming-of-Lilian.ttf) ;
+}
+
 body {
   margin: 0;/* marge extérieur */
-}
-footer{
-background-color: #317AD3;
-margin: 0;
-
+  box-sizing: border-box;
+  font-family: 'altona';
+  font-size: 2em;
 }
 
-h1 {
-  margin: 0;
+
+h1,h2,h3,h4 {
+ font-family: "altona";
+  
 }
 
 #presentation{ 
  display: flex;
- min-height: 200px; /* hauteur de l'élément */
  background : url('../images/back2.jpg') no-repeat center;
  background-size: cover;
- height : 80vh;
+ align-items: center ;
+ height : 100vh;
  width: 100vw;
+
  
+}
+#presentation img {
+  height: 70vh;
+  display: flex;
+  justify-items: center; /* ne fonctionne pas!!!! */
 }
 
 #clips{
-  padding: 30px;
+  min-height: 200px;
 }
 
 #galerie{
@@ -47,7 +66,7 @@ h1 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 50px;
+  height: 500px;
 
 }
 
@@ -55,8 +74,6 @@ h1 {
  display : flex;
  justify-content: center;
  justify-content: space-around; 
-;
-
 }
 
 .colonne{
@@ -70,17 +87,4 @@ h1 {
   height:200px;
   display: flex;
   justify-content: space-around;
-}
-
-#presentation img {
-
-height:500px;
-padding: 40px;
-display: flex;
-justify-items: center; /* ne fonctionne pas!!!! */
-
-
-
-
-
 }
