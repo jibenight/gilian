@@ -1,38 +1,44 @@
 @font-face {
-  font-family: "altona";
-  src: url(../Fonts/AltonaSans-Regular.ttf) ;
+  font-family: 'altona';
+  src: url(../Fonts/AltonaSans-Regular.ttf);
 }
 @font-face {
-  font-family: "maverick";
-  src: url(../Fonts/MAVERICK.otf) ;
+  font-family: 'maverick';
+  src: url(../Fonts/MAVERICK.otf);
 }
 @font-face {
-  font-family: "dreaming";
-  src: url(../Fonts/Dreaming-of-Lilian.ttf) ;
+  font-family: 'dreaming';
+  src: url(../Fonts/Dreaming-of-Lilian.ttf);
 }
 
 body {
-  margin: 0;/* marge extérieur */
+  margin: 0; /* marge extérieur */
   box-sizing: border-box;
   font-family: 'altona';
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
-
-h1,h2,h3,h4 {
- font-family: "altona";
-  
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'altona';
 }
 
-#presentation{ 
- display: flex;
- background : url('../images/back2.jpg') no-repeat center;
- background-size: cover;
- align-items: center ;
- height : 100vh;
- width: 100vw;
+#event {
+  padding-top: 100px;
+  min-height: 600px;
+}
 
- 
+#presentation {
+  display: flex;
+  background: url('../images/back2.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 100px;
 }
 #presentation img {
   height: 70vh;
@@ -40,21 +46,21 @@ h1,h2,h3,h4 {
   justify-items: center; /* ne fonctionne pas!!!! */
 }
 
-#clips{
-  min-height: 200px;
+#clips {
+  min-height: 600px;
+  padding-top: 100px;
 }
 
-#galerie{
-  background : url('../images/back1.jpg') no-repeat center;
+#galerie {
+  background: url('../images/back1.jpg') no-repeat center;
+  background-attachment: fixed;
   background-size: cover;
-  height : 80vh;
+  height: 80vh;
   width: 100vw;
+  padding-top: 100px;
 }
 
-
-
-
-.centrage{
+.centrage {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -62,29 +68,27 @@ h1,h2,h3,h4 {
   padding: 0px 20px;
 }
 
-.haut{
+.haut {
   display: flex;
   flex-direction: column;
   text-align: center;
   height: 500px;
-
 }
 
-.aligne{
- display : flex;
- justify-content: center;
- justify-content: space-around; 
+.aligne {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
 }
 
-.colonne{
+.colonne {
   display: flex;
   flex-direction: column;
   text-align: center;
-
 }
 
-#galerie img{
-  height:200px;
+#galerie img {
+  height: 200px;
   display: flex;
   justify-content: space-around;
 }
