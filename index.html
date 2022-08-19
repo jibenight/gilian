@@ -5,109 +5,346 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gilian - officiel</title>
-
-    <link rel="stylesheet" href="./css/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
-  
-  <!--https://flexboxfroggy.com/#fr
-  https://www.pexels.com/fr-fr/chercher/musicien/-->
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 780px)"
+      href="./css/mobile.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
-  <body>
-    <header><!--..............................................................début header-->
-      <nav>
-       <div >
-        <h2>Gilian</h2>
-      </div>
 
-       <div>
+  <body>
+    <nav>
+      <div>
+        <a href=""><h2>Gilian</h2></a>
+      </div>
+      <div id="menu-list">
         <ul>
           <a href="#event">
-          <li>Événements</li>
+            <li>Événements</li>
           </a>
-
           <a href="#presentation">
-          <li>Présentation</li>
+            <li>Présentation</li>
           </a>
-
-          <a href="#clips">
-          <li>Clips</li>
-          </a>
-
           <a href="#galerie">
-          <li>Galerie</li>
+            <li>Galerie</li>
           </a>
-
+          <a href="#clips">
+            <li>Clips</li>
+          </a>
           <a href="#footer">
-          <li>Contact</li>
+            <li>Contact</li>
           </a>
-          
         </ul>
-       </div>
+      </div>
+      <img src="./images/menu-90.png" alt="" id="menu-mobile" />
+      <img src="./images/cross.png" alt="" id="cross-mobile" />
+    </nav>
+    <!--début header-->
+    <header class="center">
+      <div class="bg-filter">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide center column">
+              <div>
+                <h1>Gilian</h1>
+              </div>
+            </div>
+            <div class="swiper-slide center column">
+              <div>
+                <h2 class="titre-white">Last clip</h2>
+              </div>
+              <div class="wrapper-video center">
+                <div class="video center">
+                  <iframe
+                    src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    class="video-item"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide center column">
+              <div>
+                <h2 class="titre-white">next event</h2>
+              </div>
+              <picture>
+                <source srcset="" media="" />
+                <img src="./images/photo2.jpg" alt="" />
+              </picture>
+              <div class="content-white p-header">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Soluta ipsa doloremque aliquam voluptates recusandae voluptas
+                  nesciunt totam repudiandae, distinctio voluptate! Iure nulla
+                  placeat similique sunt perspiciatis in velit animi corporis?
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Error facere commodi ex magni voluptatem laborum autem
+                  consequuntur dignissimos maiores, velit exercitationem quis
+                  at, illum expedita. Corrupti dolore reprehenderit temporibus
+                  deserunt! Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Rerum earum illum in aperiam et magni, ipsum harum vero
+                  soluta est dolores fugiat, debitis sequi totam blanditiis
+                  labore. Perspiciatis, vitae nostrum.
+                </p>
+              </div>
+            </div>
+          </div>
 
-      </nav>
-      
-      <section> 
-
-      </section>
-    </header><!--fin header-->
-
-    <main>
-      <section id ="event"> <!--.......................................................... événement début-->
-        <div class = "centrage"> <h2> Événements à venir </h2> </div>
-        <div class = "aligne"> 
-         <div class ="colonne"> <p> <h3>évenement 1</h3>  blablabla</p> </div> 
-         <div class ="colonne"> <p> <h3>événement 2</h3> blablabla</p></div> 
-         <div class ="colonne"> <p> <h3>événement 3</h3> bla </p> </div>
-        
-        
-        
-        </div> 
-      
-        </section> <!-- événement fin-->
-      
-
-      <section id="presentation"> <!-- ..........................................................début présentation-->
-        <div class="haut" ;"> 
-          <h2>Présentation</h2>
-          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto beatae id, porro optio animi nulla delectus voluptates dolore rerum quo a deserunt deleniti ipsum itaque temporibus maiores? Eaque, accusantium deserunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum nostrum ad, impedit incidunt voluptas nulla provident sequi tempore dolore autem optio ducimus magnam veritatis officia. Sit tempore ut excepturi numquam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta qui quibusdam ad fugiat pariatur ea veritatis, incidunt repellat! Quis voluptates molestias cupiditate deserunt nisi accusantium eum eaque excepturi dolorem illum!</p>
-        </div>
-
-        <div > 
-          <img src="./images/gilian.jpg" alt="arbre"> 
-        </div>
-      </section> <!--fin présentation-->
-
-      <section id ="clips"><!--..................................................................début Clips-->
-        <div class="centrage"> <h2>Les Clips</h2></div>
-        <div class="centrage"> emplacement vidéo </div>
-        <div class="centrage"> emplacement bouton </div>
-      </section> <!--fin Clips-->
-
-      <section id="galerie"><!-- ...............................................................début Galerie-->
-        <div class="centrage"><h2>La Galerie</h2></div>
-        <div class="aligne"> <p> <img src="./images/photo 1.jpg"" alt=""></p> <p><img src="./images/photo2.jpg" alt=""></p> </div>
-        <div class="aligne"> <p><img src="./images/photo 3.jpg" alt=""></p> <p><img src="./images/photo 4.jpg" alt=""></p> </div>
-      </section> <!--fin Galerie-->
-
-     
-    </main>
-
-    <footer id="footer" class="centrage"> <!--................................................................début footer-->
-      <h2>Contact</h2>
-      <a href="mailto : contact@gilian-officiel.com "><p>contact@gilian-officiel.com</p></a>
-      <div id="socialshare">
-        <div> 
-          <img src="./images/facebook.png" alt="">
-        </div>
-        <div>
-          <img src="./images/facebook.png" alt="">
-        </div>
-        <div>
-          <img src="./images/facebook.png" alt="">
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
-      <a href=""><p> mentions légales </p></a>
-    </footer><!--fin footer-->
+    </header>
+    <main>
+      <!-- événement début -->
+      <section id="event" class="center column">
+        <div>
+          <h2 class="titre-black">Last events</h2>
+        </div>
+        <div class="center">
+          <div class="center column">
+            <h3>évenement 1</h3>
+            <picture>
+              <source srcset="" media="" />
+              <img src="./images/photo2.jpg" alt="" />
+            </picture>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+              recusandae, eligendi repudiandae sequi eius minima at saepe
+              quidem, culpa omnis architecto error quo distinctio tempore iste
+              sit? Corporis, rerum numquam.
+            </p>
+          </div>
+          <div class="center column">
+            <h3>événement 2</h3>
+            <picture>
+              <source srcset="" media="" />
+              <img src="./images/photo2.jpg" alt="" />
+            </picture>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi,
+              ad non. Porro vel minus magni optio eum est error veniam totam
+              deleniti dolores vitae, officia tempore, dolor, cum ab rem.
+            </p>
+          </div>
+          <div class="center column">
+            <h3>événement 3</h3>
+            <picture>
+              <source srcset="" media="" />
+              <img src="./images/photo2.jpg" alt="" />
+            </picture>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
+              vitae vel optio unde repudiandae quaerat ab doloribus voluptatum
+              magnam, temporibus quae blanditiis, eius minima repellat
+              perspiciatis dolorem, nulla officia!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--début présentation-->
+      <section id="presentation" class="center column">
+        <div class="bg-filter">
+          <div class="center column">
+            <h2 class="titre-white">Gilian</h2>
+            <p class="content-white">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
+              beatae id, porro optio animi nulla delectus voluptates dolore
+              rerum quo a deserunt deleniti ipsum itaque temporibus maiores?
+              Eaque, accusantium deserunt. Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Harum nostrum ad, impedit incidunt
+              voluptas nulla provident sequi tempore dolore autem optio ducimus
+              magnam veritatis officia. Sit tempore ut excepturi numquam! Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Dicta qui
+              quibusdam ad fugiat pariatur ea veritatis, incidunt repellat! Quis
+              voluptates molestias cupiditate deserunt nisi accusantium eum
+              eaque excepturi dolorem illum!
+            </p>
+          </div>
+
+          <div class="center">
+            <picture>
+              <source media="(min-width: 780)" srcset="" />
+              <img src="./images/gilian.jpg" alt="arbre" />
+            </picture>
+            <picture>
+              <source media="(min-width: 780)" srcset="" />
+              <img src="./images/gilian.jpg" alt="arbre" />
+            </picture>
+            <picture>
+              <source media="(min-width: 780)" srcset="" />
+              <img src="./images/gilian.jpg" alt="arbre" />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!--début Galerie-->
+      <section id="galerie" class="center column">
+        <div class="center">
+          <h2 class="titre-black">Galerie</h2>
+        </div>
+
+        <div class="grid-photos">
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+        </div>
+      </section>
+
+      <!--début Clips-->
+      <section id="clips" class="clips center">
+        <div class="bg-filter">
+          <div class="center">
+            <h2 class="titre-white">Clips</h2>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide center column">
+                <div>
+                  <h3 class="">Video 1</h3>
+                </div>
+                <div class="wrapper-video center">
+                  <div class="video center">
+                    <iframe
+                      src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      class="video-item"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide center column">
+                <div>
+                  <h3 class="">video 2</h3>
+                </div>
+                <div class="wrapper-video center">
+                  <div class="video center">
+                    <iframe
+                      src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      class="video-item"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide center column">
+                <div>
+                  <h3 class="">Video 3</h3>
+                </div>
+                <div class="wrapper-video center">
+                  <div class="video center">
+                    <iframe
+                      src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      class="video-item"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- début footer -->
+    <footer id="footer" class="center column">
+      <div class="center column">
+        <h2 class="titre-white">Contact</h2>
+        <div id="email" class="center column">
+          <picture>
+            <source media="(min-width: )" srcset="" />
+            <img src="./images/email.png" alt="" />
+          </picture>
+          <a href="mailto : contact@gilian-officiel.com ">
+            <p>contact@gilian-officiel.com</p>
+          </a>
+        </div>
+      </div>
+
+      <div id="socialshare" class="center">
+        <div class="icon-social">
+          <img src="./images/youtube-128.png" alt="" />
+        </div>
+        <div class="icon-social">
+          <img src="./images/instagram-128.png" alt="" />
+        </div>
+        <div class="icon-social">
+          <img src="./images/facebook-128.png" alt="" />
+        </div>
+      </div>
+      <div id="copyright">
+        <p>Copyright &#169; 2022 - <a href=""> Mentions légales </a></p>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>

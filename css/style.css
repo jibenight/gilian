@@ -11,84 +11,196 @@
   src: url(../Fonts/Dreaming-of-Lilian.ttf);
 }
 
+@font-face {
+  font-family: 'Rallifornia';
+  src: url('../Fonts/Rallifornia/Rallifornia.woff') format('woff'),
+    url('../Fonts/Rallifornia/Rallifornia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --titre-white: #fafafa;
+  --titre-black: #090f17;
+}
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0; /* marge extérieur */
   box-sizing: border-box;
   font-family: 'altona';
-  font-size: 1.7em;
+  font-size: 1.4em;
 }
 
-h1,
-h2,
+h1 {
+  font-family: 'Rallifornia';
+  color: var(--titre-white);
+  font-size: 20em;
+}
+
+h2 {
+  font-family: 'Rallifornia';
+}
 h3,
 h4 {
   font-family: 'altona';
 }
 
+p {
+  line-height: 1.4em;
+}
+
+.titre-white {
+  color: var(--titre-white);
+  font-size: 5vw;
+  text-transform: uppercase;
+}
+.titre-black {
+  color: var(--titre-black);
+  font-size: 5vw;
+  text-transform: uppercase;
+}
+
+.bg-filter {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+
+.column {
+  flex-direction: column;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-white {
+  color: var(--titre-white);
+}
+
+header .swiper {
+  width: 100vw;
+  height: 90vh;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--titre-white);
+  margin: 0 2%;
+}
+
 #event {
-  padding-top: 100px;
-  min-height: 600px;
+  min-height: 540px;
+  padding-bottom: 5%;
+}
+
+#event :nth-child(2) .center {
+  margin: 2%;
+  text-align: center;
+}
+
+#event img {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #presentation {
-  display: flex;
-  background: url('../images/back2.jpg') no-repeat center;
+  background: url('../images/back1.jpg') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  padding-top: 100px;
-}
-#presentation img {
-  height: 70vh;
-  display: flex;
-  justify-items: center; /* ne fonctionne pas!!!! */
 }
 
-#clips {
-  min-height: 600px;
-  padding-top: 100px;
+#presentation .bg-filter :nth-child(1) {
+  text-align: center;
+  padding: 0 2%;
+}
+
+#presentation .bg-filter :nth-child(2) {
+  text-align: center;
+  padding: 1% 2%;
+}
+
+#presentation img {
+  height: 35vh;
 }
 
 #galerie {
-  background: url('../images/back1.jpg') no-repeat center;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 80vh;
-  width: 100vw;
-  padding-top: 100px;
+  min-height: 600px;
+  padding-bottom: 5%;
 }
 
-.centrage {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0px 20px;
-}
-
-.haut {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 500px;
-}
-
-.aligne {
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-}
-
-.colonne {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+#galerie :nth-child(2) picture {
+  margin: 10px;
 }
 
 #galerie img {
-  height: 200px;
-  display: flex;
-  justify-content: space-around;
+  height: 290px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.grid-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+#clips {
+  background: url('../images/back2.jpg') no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#clips h3 {
+  color: var(--titre-white);
+}
+
+#clips .swiper {
+  width: 100vw;
+}
+
+#clips .swiper-button-next,
+#clips .swiper-button-prev {
+  color: var(--titre-white);
+  margin: 0 2%;
+}
+
+.wrapper-video {
+  width: 50%;
+}
+.video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.video-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
