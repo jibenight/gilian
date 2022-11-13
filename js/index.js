@@ -1,36 +1,66 @@
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+// js for menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
 });
 
-// js for menu
-const menuMobile = document.getElementById('menu-mobile');
-const crossMobile = document.getElementById('cross-mobile');
-const navigation = document.querySelector('#menu-list');
-const openMenuMobile = () => {
-  navigation.style.display = 'block';
-  navigation.classList.add('full-menu-mobile');
-  menuMobile.style.display = 'none';
-  crossMobile.style.display = 'block';
+document.querySelectorAll('.nav-link').forEach(n =>
+  n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+  })
+);
+
+// solve anchor issue height
+const navigationHeight = document.querySelector('.navbar').offsetHeight;
+document.documentElement.style.setProperty(
+  '--scroll-padding',
+  navigationHeight - 1 + 'px'
+);
+
+// slider 1
+const items = document.querySelectorAll('.slider-item.slider-1');
+const nbSlide = items.length;
+const nextSlide = document.querySelector('.button-next.slider-1');
+const prevSlide = document.querySelector('.button-prev.slider-1');
+let count = 0;
+
+const nextSlider = () => {
+  items[count].classList.remove('active');
+  count < nbSlide - 1 ? count++ : (count = 0);
+  items[count].classList.add('active');
 };
-menuMobile.addEventListener('click', openMenuMobile);
 
-const closeMenuMobile = () => {
-  navigation.style.display = 'none';
-  navigation.classList.remove('full-menu-mobile');
-  menuMobile.style.display = 'block';
-  crossMobile.style.display = 'none';
+const prevSlider = () => {
+  items[count].classList.remove('active');
+  count > 0 ? count-- : (count = nbSlide - 1);
+  items[count].classList.add('active');
 };
-crossMobile.addEventListener('click', closeMenuMobile);
 
-if (window.matchMedia('(max-width: 780px)').matches) {
-  navigation.addEventListener('click', closeMenuMobile);
-}
+nextSlide.addEventListener('click', nextSlider);
+prevSlide.addEventListener('click', prevSlider);
 
-//window.addEventListener('resize', displayWindowSize);
+// slider 2
+const items2 = document.querySelectorAll('.slider-item.slider-2');
+const nbSlide2 = items2.length;
+const nextSlide2 = document.querySelector('.button-next.slider-2');
+const prevSlide2 = document.querySelector('.button-prev.slider-2');
+let count2 = 0;
+
+const nextSlider2 = () => {
+  items2[count2].classList.remove('active');
+  count2 < nbSlide2 - 1 ? count2++ : (count2 = 0);
+  items2[count2].classList.add('active');
+};
+
+const prevSlider2 = () => {
+  items2[count2].classList.remove('active');
+  count2 > 0 ? count2-- : (count2 = nbSlide2 - 1);
+  items2[count2].classList.add('active');
+};
+
+nextSlide2.addEventListener('click', nextSlider2);
+prevSlide2.addEventListener('click', prevSlider2);

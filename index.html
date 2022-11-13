@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
     <title>Gilian - officiel</title>
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
+    /> -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
@@ -17,54 +18,52 @@
       media="screen and (max-width: 780px)"
       href="./css/mobile.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
   </head>
 
   <body>
-    <nav>
-      <div>
+    <nav class="navbar">
+      <div class="nav-branding">
         <a href=""><h2>Gilian</h2></a>
       </div>
-      <div id="menu-list">
-        <ul>
-          <a href="#event">
-            <li>Événements</li>
-          </a>
-          <a href="#presentation">
-            <li>Présentation</li>
-          </a>
-          <a href="#galerie">
-            <li>Galerie</li>
-          </a>
-          <a href="#clips">
-            <li>Clips</li>
-          </a>
-          <a href="#footer">
-            <li>Contact</li>
-          </a>
-        </ul>
+
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#event" class="nav-link">Événements</a>
+        </li>
+        <li class="nav-item"><a href="#clips" class="nav-link">Clips</a></li>
+        <li class="nav-item">
+          <a href="#galerie" class="nav-link">Galerie</a>
+        </li>
+        <li class="nav-item">
+          <a href="#presentation" class="nav-link">Présentation</a>
+        </li>
+        <li class="nav-item"><a href="#footer" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
-      <img src="./images/menu-90.png" alt="" id="menu-mobile" />
-      <img src="./images/cross.png" alt="" id="cross-mobile" />
     </nav>
     <!--début header-->
     <header class="center">
-      <div class="bg-filter">
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide center column">
-              <div>
-                <h1>Gilian</h1>
-              </div>
+      <div class="bg-filter center">
+        <div class="slider center">
+          <div class="button-prev slider-1">
+            <img src="./images/left-arrow.png" alt="" />
+          </div>
+          <!-- Slides -->
+          <div class="slider-item-wrap center">
+            <!-- slide 1 -->
+            <div class="slider-item slider-1">
+              <h1>Gilian</h1>
             </div>
-            <div class="swiper-slide center column">
-              <div>
-                <h2 class="titre-white">Last clip</h2>
-              </div>
-              <div class="wrapper-video center">
-                <div class="video center">
+            <!-- slide 2 -->
+            <div class="slider-item slider-1 active column">
+              <h2 class="titre-white">Last clip</h2>
+              <div class="wrapper-video">
+                <div class="video">
                   <iframe
                     src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
                     title="YouTube video player"
@@ -76,36 +75,38 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide center column">
-              <div>
+            <!-- slide 3 -->
+            <div class="slider-item slider-1">
+              <div class="center column">
                 <h2 class="titre-white">next event</h2>
-              </div>
-              <picture>
-                <source srcset="" media="" />
-                <img src="./images/photo2.jpg" alt="" />
-              </picture>
-              <div class="content-white p-header">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Soluta ipsa doloremque aliquam voluptates recusandae voluptas
-                  nesciunt totam repudiandae, distinctio voluptate! Iure nulla
-                  placeat similique sunt perspiciatis in velit animi corporis?
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Error facere commodi ex magni voluptatem laborum autem
-                  consequuntur dignissimos maiores, velit exercitationem quis
-                  at, illum expedita. Corrupti dolore reprehenderit temporibus
-                  deserunt! Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Rerum earum illum in aperiam et magni, ipsum harum vero
-                  soluta est dolores fugiat, debitis sequi totam blanditiis
-                  labore. Perspiciatis, vitae nostrum.
-                </p>
+                <picture>
+                  <source srcset="" media="" />
+                  <img src="./images/photo2.jpg" alt="" />
+                </picture>
+
+                <div class="content-white p-header">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Soluta ipsa doloremque aliquam voluptates recusandae
+                    voluptas nesciunt totam repudiandae, distinctio voluptate!
+                    Iure nulla placeat similique sunt perspiciatis in velit
+                    animi corporis? Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Error facere commodi ex magni voluptatem
+                    laborum autem consequuntur dignissimos maiores, velit
+                    exercitationem quis at, illum expedita. Corrupti dolore
+                    reprehenderit temporibus deserunt! Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Rerum earum illum in
+                    aperiam et magni, ipsum harum vero soluta est dolores
+                    fugiat, debitis sequi totam blanditiis labore. Perspiciatis,
+                    vitae nostrum.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="button-next slider-1">
+            <img src="./images/left-arrow.png" alt="" />
+          </div>
         </div>
       </div>
     </header>
@@ -157,39 +158,70 @@
         </div>
       </section>
 
-      <!--début présentation-->
-      <section id="presentation" class="center column">
+      <!--début Clips-->
+      <section id="clips" class="clips center">
         <div class="bg-filter">
-          <div class="center column">
-            <h2 class="titre-white">Gilian</h2>
-            <p class="content-white">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
-              beatae id, porro optio animi nulla delectus voluptates dolore
-              rerum quo a deserunt deleniti ipsum itaque temporibus maiores?
-              Eaque, accusantium deserunt. Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Harum nostrum ad, impedit incidunt
-              voluptas nulla provident sequi tempore dolore autem optio ducimus
-              magnam veritatis officia. Sit tempore ut excepturi numquam! Lorem
-              ipsum dolor, sit amet consectetur adipisicing elit. Dicta qui
-              quibusdam ad fugiat pariatur ea veritatis, incidunt repellat! Quis
-              voluptates molestias cupiditate deserunt nisi accusantium eum
-              eaque excepturi dolorem illum!
-            </p>
-          </div>
-
           <div class="center">
-            <picture>
-              <source media="(min-width: 780)" srcset="" />
-              <img src="./images/gilian.jpg" alt="arbre" />
-            </picture>
-            <picture>
-              <source media="(min-width: 780)" srcset="" />
-              <img src="./images/gilian.jpg" alt="arbre" />
-            </picture>
-            <picture>
-              <source media="(min-width: 780)" srcset="" />
-              <img src="./images/gilian.jpg" alt="arbre" />
-            </picture>
+            <h2 class="titre-white">Clips</h2>
+          </div>
+          <div class="slider center">
+            <div class="button-prev slider-2">
+              <img src="./images/left-arrow.png" alt="" />
+            </div>
+            <!-- Slide 1 -->
+            <div class="slider-item-wrap center">
+              <div class="slider-item slider-2 active column">
+                <div class="wrapper-video">
+                  <div class="video">
+                    <iframe
+                      src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      class="video-item"
+                    ></iframe>
+                  </div>
+                </div>
+                <h3>video 1</h3>
+              </div>
+
+              <!-- slide 2 -->
+              <div class="slider-item slider-2 column">
+                <div class="wrapper-video">
+                  <div class="video">
+                    <iframe
+                      src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      class="video-item"
+                    ></iframe>
+                  </div>
+                </div>
+                <h3>video 2</h3>
+              </div>
+              <!-- slide 3 -->
+              <div class="slider-item slider-2 column">
+                <div class="wrapper-video">
+                  <div class="video">
+                    <iframe
+                      src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      class="video-item"
+                    ></iframe>
+                  </div>
+                </div>
+                <h3>video 3</h3>
+              </div>
+            </div>
+            <div class="button-next slider-2">
+              <img src="./images/left-arrow.png" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -245,72 +277,57 @@
             <source media="(min-width: 780)" srcset="" />
             <img src="./images/photo-4.jpg" alt="" />
           </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
+
+          <picture>
+            <source media="(min-width: 780)" srcset="" />
+            <img src="./images/photo-4.jpg" alt="" />
+          </picture>
         </div>
       </section>
 
-      <!--début Clips-->
-      <section id="clips" class="clips center">
+      <!--début présentation-->
+      <section id="presentation" class="center column">
         <div class="bg-filter">
-          <div class="center">
-            <h2 class="titre-white">Clips</h2>
+          <div class="center column">
+            <h2 class="titre-white">Gilian</h2>
+            <p class="content-white">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
+              beatae id, porro optio animi nulla delectus voluptates dolore
+              rerum quo a deserunt deleniti ipsum itaque temporibus maiores?
+              Eaque, accusantium deserunt. Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Harum nostrum ad, impedit incidunt
+              voluptas nulla provident sequi tempore dolore autem optio ducimus
+              magnam veritatis officia. Sit tempore ut excepturi numquam! Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Dicta qui
+              quibusdam ad fugiat pariatur ea veritatis, incidunt repellat! Quis
+              voluptates molestias cupiditate deserunt nisi accusantium eum
+              eaque excepturi dolorem illum!
+            </p>
           </div>
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide center column">
-                <div>
-                  <h3 class="">Video 1</h3>
-                </div>
-                <div class="wrapper-video center">
-                  <div class="video center">
-                    <iframe
-                      src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                      class="video-item"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide center column">
-                <div>
-                  <h3 class="">video 2</h3>
-                </div>
-                <div class="wrapper-video center">
-                  <div class="video center">
-                    <iframe
-                      src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                      class="video-item"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide center column">
-                <div>
-                  <h3 class="">Video 3</h3>
-                </div>
-                <div class="wrapper-video center">
-                  <div class="video center">
-                    <iframe
-                      src="https://www.youtube.com/embed/IxGolimTL0g?controls=0"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                      class="video-item"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+
+          <div class="center">
+            <picture>
+              <source media="(min-width: 780)" srcset="" />
+              <img src="./images/gilian.jpg" alt="arbre" />
+            </picture>
+            <picture>
+              <source media="(min-width: 780)" srcset="" />
+              <img src="./images/gilian.jpg" alt="arbre" />
+            </picture>
+            <picture>
+              <source media="(min-width: 780)" srcset="" />
+              <img src="./images/gilian.jpg" alt="arbre" />
+            </picture>
           </div>
         </div>
       </section>

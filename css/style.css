@@ -20,7 +20,7 @@
 }
 
 :root {
-  --titre-white: #fafafa;
+  --titre-white: #e7e7e7;
   --titre-black: #090f17;
 }
 
@@ -35,6 +35,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 99px);
 }
 
 body {
@@ -48,6 +49,7 @@ h1 {
   font-family: 'Rallifornia';
   color: var(--titre-white);
   font-size: 20em;
+  text-align: center;
 }
 
 h2 {
@@ -90,17 +92,6 @@ p {
 
 .content-white {
   color: var(--titre-white);
-}
-
-header .swiper {
-  width: 100vw;
-  height: 90vh;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: var(--titre-white);
-  margin: 0 2%;
 }
 
 #event {
@@ -148,21 +139,26 @@ header .swiper {
   padding-bottom: 5%;
 }
 
-#galerie :nth-child(2) picture {
-  margin: 10px;
+.grid-photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto 0;
 }
 
-#galerie img {
-  height: 290px;
+.grid-photos picture {
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+  overflow: hidden;
+  flex-shrink: 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.grid-photos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  column-gap: 10px;
-  row-gap: 10px;
+.grid-photos picture img {
+  width: 100%;
 }
 
 #clips {
@@ -175,32 +171,65 @@ header .swiper {
 
 #clips h3 {
   color: var(--titre-white);
+  text-align: center;
 }
 
-#clips .swiper {
-  width: 100vw;
-}
-
-#clips .swiper-button-next,
-#clips .swiper-button-prev {
-  color: var(--titre-white);
-  margin: 0 2%;
+#clips .slider {
+  margin-top: 30px;
 }
 
 .wrapper-video {
-  width: 50%;
-}
-.video {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
+  width: 50vw;
 }
 
 .video-item {
-  position: absolute;
-  top: 0;
-  left: 0;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+/* style for slider */
+
+.slider-item {
+  display: none;
+}
+
+.slider-item h2 {
+  text-align: center;
+}
+
+.slider-item.active {
+  display: block;
+}
+
+.button-next img {
+  rotate: 180deg;
   width: 100%;
   height: 100%;
+}
+
+.button-next {
+  width: 90px;
+}
+
+.button-prev {
+  width: 90px;
+}
+
+.button-next,
+.button-prev {
+  cursor: pointer;
+  display: none;
+}
+
+.button-prev img {
+  width: 100%;
+  height: 100%;
+}
+.slider {
+  justify-content: space-between;
+  margin-top: -100px;
+}
+
+.slider-item-wrap {
+  width: 80vw;
 }
