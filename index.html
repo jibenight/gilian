@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Gilian - officiel</title>
+    <script src="./js/video/dist/js/splide-extension-video.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
@@ -17,6 +18,10 @@
     <link
       rel="stylesheet"
       href="./js/splide-4.1.3/dist/css/themes/splide-default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./js/video/dist/css/splide-extension-video.min.css"
     />
   </head>
 
@@ -159,17 +164,17 @@
 
       <!--début Clips-->
       <section id="clips" class="clips center">
-        <div class="bg-filter">
+        <div class="bg-filter center column"> 
           <div class="center">
             <h2 class="titre-white">Clips</h2>
           </div>
 
-          <div class="slider center">
+          <!-- <div class="slider center">
             <div class="button-prev slider-2">
               <img src="./images/left-arrow.png" alt="" />
-            </div>
-            <!-- Slide 1 -->
-            <div class="slider-item-wrap center">
+            </div> -->
+          <!-- Slide 1 -->
+          <!-- <div class="slider-item-wrap center">
               <div class="slider-item slider-2 active column">
                 <div class="wrapper-video">
                   <div class="video">
@@ -184,10 +189,10 @@
                   </div>
                 </div>
                 <h3>video 1</h3>
-              </div>
+              </div> -->
 
-              <!-- slide 2 -->
-              <div class="slider-item slider-2 column">
+          <!-- slide 2 -->
+          <!-- <div class="slider-item slider-2 column">
                 <div class="wrapper-video">
                   <div class="video">
                     <iframe
@@ -201,9 +206,9 @@
                   </div>
                 </div>
                 <h3>video 2</h3>
-              </div>
-              <!-- slide 3 -->
-              <div class="slider-item slider-2 column">
+              </div> -->
+          <!-- slide 3 -->
+          <!-- <div class="slider-item slider-2 column">
                 <div class="wrapper-video">
                   <div class="video">
                     <iframe
@@ -218,12 +223,26 @@
                 </div>
                 <h3>video 3</h3>
               </div>
-            </div>
-            <div class="button-next slider-2">
+            </div> -->
+          <!-- <div class="button-next slider-2">
               <img src="./images/left-arrow.png" alt="" />
             </div>
+          </div> -->
+
+          <div id="video-slides" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+              
+                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=mhlj0ZNLjcI">
+                  <img src="./images/background-gilian.jpg">
+                </li>
+                <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=mhlj0ZNLjcI">
+                  <img src="./images/background-gilian.jpg">
+                </li>
+              
+              </ul>
+            </div>
           </div>
-        </div>
       </section>
 
       <!--début Galerie-->
@@ -321,6 +340,7 @@
       </div>
     </footer>
     <script src="./js/splide-4.1.3/dist/js/splide.min.js"></script>
+
     <script src="./js/index.js"></script>
   </body>
 </html>

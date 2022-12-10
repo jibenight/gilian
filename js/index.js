@@ -62,13 +62,23 @@ const prevSlider2 = () => {
   items2[count2].classList.add('active');
 };
 
-nextSlide2.addEventListener('click', nextSlider2);
-prevSlide2.addEventListener('click', prevSlider2);
+// nextSlide2.addEventListener('click', nextSlider2);
+// prevSlide2.addEventListener('click', prevSlider2);
 
 // slider with Splide
-new Splide('.splide', {
+new Splide('#main-carousel', {
   type: 'fade',
   rewind: true,
   padding: '10rem',
   width: '80vw',
 }).mount();
+
+// video slide
+
+new Splide('#video-slides', {
+  padding: '10rem',
+  width: '80vw',
+  video: {
+    loop: true,
+  },
+}).mount(window.splide.Extensions);
