@@ -76,6 +76,8 @@ new Splide('#main-carousel', {
 // video slide
 
 new Splide('#video-slides', {
+  type: 'fade',
+  rewind: true,
   padding: '10rem',
   width: '80vw',
   video: {
