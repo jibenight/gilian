@@ -64,3 +64,11 @@ const prevSlider2 = () => {
 
 nextSlide2.addEventListener('click', nextSlider2);
 prevSlide2.addEventListener('click', prevSlider2);
+
+// slider with Splide
+new Splide('.splide', {
+  type: 'fade',
+  rewind: true,
+  padding: '10rem',
+  width: '80vw',
+}).mount();

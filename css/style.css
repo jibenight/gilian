@@ -1,22 +1,10 @@
 @font-face {
-  font-family: 'altona';
-  src: url(../Fonts/AltonaSans-Regular.ttf);
+  font-family: 'quantify';
+  src: url(../Fonts/quantify/Quantify.ttf);
 }
 @font-face {
-  font-family: 'maverick';
-  src: url(../Fonts/MAVERICK.otf);
-}
-@font-face {
-  font-family: 'dreaming';
-  src: url(../Fonts/Dreaming-of-Lilian.ttf);
-}
-
-@font-face {
-  font-family: 'Rallifornia';
-  src: url('../Fonts/Rallifornia/Rallifornia.woff') format('woff'),
-    url('../Fonts/Rallifornia/Rallifornia.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'louis george cafe';
+  src: url(../Fonts/louis-george/Louis-George-Cafe.ttf);
 }
 
 :root {
@@ -41,23 +29,24 @@ html {
 body {
   margin: 0; /* marge extérieur */
   box-sizing: border-box;
-  font-family: 'altona';
+  font-family: 'louis george cafe';
   font-size: 1.4em;
 }
 
 h1 {
-  font-family: 'Rallifornia';
+  font-family: 'quantify';
   color: var(--titre-white);
-  font-size: 20em;
+  font-size: 15em;
   text-align: center;
 }
 
 h2 {
-  font-family: 'Rallifornia';
+  font-family: 'quantify';
 }
+
 h3,
 h4 {
-  font-family: 'altona';
+  font-family: 'louis george cafe';
 }
 
 p {
@@ -76,7 +65,7 @@ p {
 }
 
 .bg-filter {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
 }
@@ -112,7 +101,7 @@ p {
 }
 
 #presentation {
-  background: url('../images/back1.jpg') no-repeat center;
+  background: url('../images/background-gilian.jpg') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   align-items: center;
@@ -133,10 +122,14 @@ p {
 #presentation img {
   height: 35vh;
 }
+#presentation p {
+  text-align: left;
+}
 
 #galerie {
   min-height: 600px;
   padding-bottom: 5%;
+  margin: auto;
 }
 
 .grid-photos {
@@ -218,7 +211,6 @@ p {
 .button-next,
 .button-prev {
   cursor: pointer;
-  display: none;
 }
 
 .button-prev img {
@@ -232,4 +224,24 @@ p {
 
 .slider-item-wrap {
   width: 80vw;
+}
+
+/* slider with slide */
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.splide__slide {
+  opacity: 0.6;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+}
+
+#main-carousel {
+  margin: 10px;
 }

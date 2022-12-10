@@ -15,7 +15,7 @@ header p {
   width: 80%;
 }
 header h2 {
-  font-family: 'Rallifornia';
+  font-family: 'quantify';
   color: var(--titre-white);
   line-height: 0;
 }
@@ -36,7 +36,7 @@ nav a {
 }
 
 nav h2 {
-  font-family: 'Rallifornia';
+  font-family: 'quantify';
   color: var(--titre-white);
   margin-left: 20px;
 }

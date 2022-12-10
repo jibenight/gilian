@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Gilian - officiel</title>
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    /> -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
@@ -18,7 +14,10 @@
       media="screen and (max-width: 780px)"
       href="./css/mobile.css"
     />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="./js/splide-4.1.3/dist/css/themes/splide-default.min.css"
+    />
   </head>
 
   <body>
@@ -31,7 +30,7 @@
         <li class="nav-item">
           <a href="#event" class="nav-link">Événements</a>
         </li>
-        <li class="nav-item"><a href="#clips" class="nav-link">Clips</a></li>
+        <li cla="nav-item"><a href="#clips" class="nav-link">Clips</a></li>
         <li class="nav-item">
           <a href="#galerie" class="nav-link">Galerie</a>
         </li>
@@ -56,11 +55,11 @@
           <!-- Slides -->
           <div class="slider-item-wrap center">
             <!-- slide 1 -->
-            <div class="slider-item slider-1">
+            <div class="slider-item active slider-1">
               <h1>Gilian</h1>
             </div>
             <!-- slide 2 -->
-            <div class="slider-item slider-1 active column">
+            <div class="slider-item slider-1 column">
               <h2 class="titre-white">Last clip</h2>
               <div class="wrapper-video">
                 <div class="video">
@@ -227,9 +226,9 @@
       </section>
 
       <!--début Galerie-->
-      <section id="galerie" class="center column">
+      <!-- <section id="galerie" class="center column">
         <div class="center">
-          <h2 class="titre-black">Galerie</h2>
+          <h2 class="titre-black">Photos shoot</h2>
         </div>
 
         <div class="grid-photos">
@@ -293,6 +292,37 @@
             <img src="./images/photo-4.jpg" alt="" />
           </picture>
         </div>
+      </section> -->
+
+      <section id="galerie" class="center column">
+        <div class="center">
+          <h2 class="titre-black">Photos shoot</h2>
+        </div>
+        <div
+          class="splide"
+          id="main-carousel"
+          aria-labelledby="carousel-heading"
+        >
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./images/phoenix-1-w1200.jpg" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/phoenix-2-w1200.jpg" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/phoenix-3-w1200.jpg" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/phoenix-4-w1200.jpg" alt="" />
+              </li>
+              <li class="splide__slide">
+                <img src="./images/phoenix-5-w1200.jpg" alt="" />
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!--début présentation-->
@@ -301,33 +331,22 @@
           <div class="center column">
             <h2 class="titre-white">Gilian</h2>
             <p class="content-white">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
-              beatae id, porro optio animi nulla delectus voluptates dolore
-              rerum quo a deserunt deleniti ipsum itaque temporibus maiores?
-              Eaque, accusantium deserunt. Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Harum nostrum ad, impedit incidunt
-              voluptas nulla provident sequi tempore dolore autem optio ducimus
-              magnam veritatis officia. Sit tempore ut excepturi numquam! Lorem
-              ipsum dolor, sit amet consectetur adipisicing elit. Dicta qui
-              quibusdam ad fugiat pariatur ea veritatis, incidunt repellat! Quis
-              voluptates molestias cupiditate deserunt nisi accusantium eum
-              eaque excepturi dolorem illum!
+              Né le 2 mars 1998, Gilian est un artiste compositeur / parolier /
+              interprète Nîmois. A l’âge de 16 ans, il se découvre la meilleure
+              des compagnies : la musique ! Passionné, il prend des cours de
+              chant, de piano, de théâtre, de danse et de comédie musicale.
+              Toutes ces compétences vont lui servir à créer un groupe 100%
+              gardois nommé les “Lemonade For Andrea” dont il sera le pianiste.
+              Cette collaboration permis de faire naître un premier EP nommé
+              “Lemonade” dont un clip sur la chanson “growing up girl” a été
+              tourné dans un restaurant de Nîmes. Après cette aventure aux
+              allures pop folk américaine, Gilian revient à ses fondamentaux qui
+              sont les chansons de variété française. Il décide alors de
+              construire une équipe afin de pouvoir réaliser son premier EP
+              solo. Rythmée par ces textes engagés et ses sonorités modernes,
+              cette œuvre musicale sera le préambule d’une aventure créative
+              fondée sur la collaboration et le partage.
             </p>
-          </div>
-
-          <div class="center">
-            <picture>
-              <source media="(min-width: 780)" srcset="" />
-              <img src="./images/gilian.jpg" alt="arbre" />
-            </picture>
-            <picture>
-              <source media="(min-width: 780)" srcset="" />
-              <img src="./images/gilian.jpg" alt="arbre" />
-            </picture>
-            <picture>
-              <source media="(min-width: 780)" srcset="" />
-              <img src="./images/gilian.jpg" alt="arbre" />
-            </picture>
           </div>
         </div>
       </section>
@@ -349,7 +368,13 @@
 
       <div id="socialshare" class="center">
         <div class="icon-social">
-          <img src="./images/youtube-128.png" alt="" />
+          <a
+            href="https://www.youtube.com/@gilian9381"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./images/youtube-128.png" alt=""
+          /></a>
         </div>
         <div class="icon-social">
           <img src="./images/instagram-128.png" alt="" />
@@ -362,6 +387,7 @@
         <p>Copyright &#169; 2022 - <a href=""> Mentions légales </a></p>
       </div>
     </footer>
+    <script src="./js/splide-4.1.3/dist/js/splide.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

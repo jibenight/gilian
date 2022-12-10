@@ -37,3 +37,34 @@ h1 {
 .wrapper-video {
   width: 95vw;
 }
+
+/* style slider  */
+
+.slider {
+  flex-direction: row;
+}
+
+.button-next,
+.button-prev {
+  width: 8%;
+}
+
+/* style clips */
+
+#clips {
+  height: 100%;
+}
+
+/* style footer */
+footer .titre-white {
+  font-size: 8vw;
+}
+
+#socialshare img {
+  width: 15vw;
+}
+
+/* style video  */
+.video-item {
+  width: 80%;
+}
