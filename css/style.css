@@ -167,8 +167,10 @@ p {
   text-align: center;
 }
 
-#clips .slider {
-  margin-top: 30px;
+#clips p {
+  color: var(--titre-white);
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .wrapper-video {

@@ -40,8 +40,8 @@ const prevSlider = () => {
   items[count].classList.add('active');
 };
 
-nextSlide.addEventListener('click', nextSlider);
-prevSlide.addEventListener('click', prevSlider);
+// nextSlide.addEventListener('click', nextSlider);
+// prevSlide.addEventListener('click', prevSlider);
 
 // slider 2
 const items2 = document.querySelectorAll('.slider-item.slider-2');
@@ -69,8 +69,8 @@ const prevSlider2 = () => {
 new Splide('#main-carousel', {
   type: 'fade',
   rewind: true,
-  padding: '10rem',
-  width: '80vw',
+  padding: '3rem',
+  width: '70vw',
 }).mount();
 
 // video slide
@@ -78,8 +78,8 @@ new Splide('#main-carousel', {
 new Splide('#video-slides', {
   type: 'fade',
   rewind: true,
-  padding: '10rem',
-  width: '80vw',
+  padding: '3rem',
+  width: '70vw',
   video: {
     loop: true,
   },
