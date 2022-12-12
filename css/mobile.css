@@ -18,8 +18,14 @@ h1 {
   flex-direction: column;
 }
 
-#presentation .bg-filter > :last-child {
-  display: none;
+#presatation-images {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.polaroid img {
+  padding: 15px 15px 30px 15px;
 }
 
 #socialshare img {
@@ -38,25 +44,14 @@ h1 {
   width: 95vw;
 }
 
-/* style slider  */
-
-/* .slider {
-  flex-direction: row;
-}
-
-.button-next,
-.button-prev {
-  width: 8%;
-} */
-
 /* style clips */
 
 #clips {
-  height: 50vh;
+  height: 60vh;
 }
 
 #galerie {
-  /* height: 50vh; */
+  min-height: 60vh;
 }
 
 /* style footer */
@@ -64,11 +59,10 @@ footer .titre-white {
   font-size: 8vw;
 }
 
-#socialshare img {
-  width: 15vw;
+footer p {
+  text-align: center;
 }
 
-/* style video  */
-.video-item {
-  width: 80%;
+#socialshare img {
+  width: 15vw;
 }
