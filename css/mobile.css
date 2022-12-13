@@ -3,7 +3,6 @@ h1 {
 }
 
 .titre-white {
-  margin-top: 6%;
   color: var(--titre-white);
   font-size: 10vw;
   text-transform: uppercase;
@@ -18,7 +17,7 @@ h1 {
   flex-direction: column;
 }
 
-#presatation-images {
+#presentation-images {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -40,16 +39,6 @@ h1 {
   width: 10vw;
 }
 
-/* style clips */
-
-#clips {
-  height: 55vh;
-}
-
-#galerie {
-  height: 60vh;
-}
-
 /* style footer */
 footer .titre-white {
   font-size: 8vw;
@@ -61,4 +50,34 @@ footer p {
 
 #socialshare img {
   width: 15vw;
+}
+
+@media all and (orientation: landscape) {
+  .navbar {
+    height: 60px;
+  }
+
+  .nav-menu {
+    top: 30px;
+  }
+
+  header {
+    margin-top: -60px;
+  }
+
+  h1 {
+    font-size: 15vw;
+  }
+
+  .titre-black {
+    font-size: 7vw;
+  }
+
+  .titre-white {
+    font-size: 7vw;
+  }
+
+  #presentation-images {
+    flex-direction: row;
+  }
 }

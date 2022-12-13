@@ -118,7 +118,7 @@ p {
   padding: 0 4% 2% 4%;
 }
 
-#presatation-images {
+#presentation-images {
   display: flex;
   justify-content: center;
 }
@@ -152,7 +152,6 @@ p {
   background: url('../images/back2.jpg') no-repeat center;
   background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
 }
 
 #clips h3 {

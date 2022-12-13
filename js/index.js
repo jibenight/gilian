@@ -51,31 +51,3 @@ new Splide('#video-slides', {
     loop: true,
   },
 }).mount(window.splide.Extensions);
-
-let datas = {
-  images: [
-    ['phoenix-1-w1200.jpg', 'alt à renseigner'],
-    ['phoenix-2-w1200.jpg', 'alt à renseigner'],
-    ['phoenix-3-w1200.jpg', 'alt à renseigner'],
-    ['phoenix-4-w1200.jpg', 'alt à renseigner'],
-    ['phoenix-5-w1200.jpg', 'alt à renseigner'],
-  ],
-  video: [
-    ['url-video', 'url-cover'],
-    ['url-video', 'url-cover'],
-  ],
-};
-
-const insertDatas = document.getElementById('insert-datas');
-
-console.log(insertDatas);
-
-for (var prop in datas.images) {
-  console.log(datas.images[prop]);
-  insertDatas.insertAdjacentHTML(
-    'afterbegin',
-    `<li class="splide__slide">
-  <img src="./images/${datas.images[prop][1]}" alt="" />
-</li>`
-  );
-}
