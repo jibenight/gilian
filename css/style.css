@@ -37,6 +37,7 @@ h1 {
   font-family: 'quantify';
   color: var(--titre-white);
   font-size: 14em;
+  line-height: 1em;
   text-align: center;
 }
 
@@ -165,54 +166,8 @@ p {
   font-size: 1.5em;
 }
 
-#clips #video-slides {
-  margin-bottom: 50px;
-}
-
-/* style for slider */
-
-.slider-item {
-  display: none;
-}
-
-.slider-item h2 {
-  text-align: center;
-}
-
-.slider-item.active {
-  display: block;
-}
-
-.button-next img {
-  rotate: 180deg;
-  width: 100%;
-  height: 100%;
-}
-
-.button-next {
-  width: 90px;
-}
-
-.button-prev {
-  width: 90px;
-}
-
-.button-next,
-.button-prev {
-  cursor: pointer;
-}
-
-.button-prev img {
-  width: 100%;
-  height: 100%;
-}
-.slider {
-  justify-content: space-between;
-  margin-top: -100px;
-}
-
-.slider-item-wrap {
-  width: 80vw;
+#clips .splide {
+  margin-bottom: 8%;
 }
 
 /* slider with slide */
@@ -233,4 +188,8 @@ p {
 
 #main-carousel {
   margin: 10px;
+}
+
+#galerie .splide {
+  margin-bottom: 8%;
 }

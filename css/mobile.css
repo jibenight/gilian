@@ -40,18 +40,14 @@ h1 {
   width: 10vw;
 }
 
-.wrapper-video {
-  width: 95vw;
-}
-
 /* style clips */
 
 #clips {
-  height: 60vh;
+  height: 55vh;
 }
 
 #galerie {
-  min-height: 60vh;
+  height: 60vh;
 }
 
 /* style footer */
