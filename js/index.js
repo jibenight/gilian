@@ -53,7 +53,6 @@ new Splide('#video-slides', {
 }).mount(window.splide.Extensions);
 
 // add class on title h2
-
 const elementsToLoadIn = new Set([
   ...document.querySelectorAll('#event h2'),
   ...document.querySelectorAll('#clips h2'),
@@ -61,10 +60,6 @@ const elementsToLoadIn = new Set([
   ...document.querySelectorAll('#presentation h2'),
   ...document.querySelectorAll('#footer h2'),
 ]);
-
-// elementsToLoadIn.forEach(el => {
-//   el.classList.add('animate__backInUp');
-// });
 
 const observerOptions = {
   root: null,
@@ -75,11 +70,12 @@ const observerOptions = {
 function observerCallback(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('animate__fadeIn');
+      entry.target.classList.add('animate__flipInX');
+    } else {
+      entry.target.classList.remove('animate__flipInX');
     }
   });
 }
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
-
 elementsToLoadIn.forEach(el => observer.observe(el));

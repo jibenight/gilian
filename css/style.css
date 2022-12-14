@@ -84,6 +84,11 @@ p {
   color: var(--titre-white);
 }
 
+.animate__fadeIn {
+  --animate-duration: 2s;
+}
+
+/* Specific style for section */
 #event {
   min-height: 540px;
   padding-bottom: 5%;
