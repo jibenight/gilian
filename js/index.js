@@ -51,3 +51,35 @@ new Splide('#video-slides', {
     loop: true,
   },
 }).mount(window.splide.Extensions);
+
+// add class on title h2
+
+const elementsToLoadIn = new Set([
+  ...document.querySelectorAll('#event h2'),
+  ...document.querySelectorAll('#clips h2'),
+  ...document.querySelectorAll('#galerie h2'),
+  ...document.querySelectorAll('#presentation h2'),
+  ...document.querySelectorAll('#footer h2'),
+]);
+
+// elementsToLoadIn.forEach(el => {
+//   el.classList.add('animate__backInUp');
+// });
+
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0,
+};
+
+function observerCallback(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate__fadeIn');
+    }
+  });
+}
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+elementsToLoadIn.forEach(el => observer.observe(el));
