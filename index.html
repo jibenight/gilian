@@ -13,10 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
-    <link
-      rel="stylesheet"
-      href="./js/splide-4.1.3/dist/css/themes/splide-skyblue.min.css"
-    />
+    <link rel="stylesheet" href="./js/splide-4.1.3/dist/css/splide.min.css" />
     <link
       rel="stylesheet"
       href="./js/video/dist/css/splide-extension-video.min.css"
@@ -83,7 +80,12 @@
             <h3>L'echo du phoenix</h3>
             <picture>
               <source srcset="" media="" />
-              <img src="./images/cover-echo-phoenix.jpg" alt="" />
+              <img
+                src="./images/cover-echo-phoenix.jpg"
+                alt=""
+                loading="lazy"
+                class="fade animate__animated"
+              />
             </picture>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
@@ -96,7 +98,12 @@
             <h3>Tournage en préparation</h3>
             <picture>
               <source srcset="" media="" />
-              <img src="./images/photo2.jpg" alt="" />
+              <img
+                src="./images/photo2.jpg"
+                alt=""
+                loading="lazy"
+                class="fade animate__animated"
+              />
             </picture>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi,
@@ -108,7 +115,12 @@
             <h3>Tournage en préparation</h3>
             <picture>
               <source srcset="" media="" />
-              <img src="./images/photo2.jpg" alt="" />
+              <img
+                src="./images/photo2.jpg"
+                alt=""
+                loading="lazy"
+                class="fade animate__animated"
+              />
             </picture>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo
@@ -126,23 +138,20 @@
           <div class="center">
             <h2 class="titre-white animate__animated">Clips</h2>
           </div>
-          <div id="video-slides" class="splide">
-            <div class="splide__arrows">
-              <button class="splide__arrow splide__arrow--prev">Prev</button>
-              <button class="splide__arrow splide__arrow--next">Next</button>
-            </div>
+          <div id="video-slides" class="splide fade animate__animated">
             <div class="splide__track">
               <ul class="splide__list">
                 <li
                   class="splide__slide"
                   data-splide-youtube="https://www.youtube.com/watch?v=mhlj0ZNLjcI"
                 >
-                  <img src="./images/vignette-video.jpg" />
+                  <img src="./images/vignette-video.jpg" loading="lazy" />
                 </li>
                 <li class="splide__slide">
                   <img
                     src="./images/coming-soon.jpg"
                     alt="coming soon en blanc sous fond noir"
+                    loading="lazy"
                   />
                 </li>
               </ul>
@@ -157,26 +166,26 @@
           <h2 class="titre-black animate__animated">Shooting photos</h2>
         </div>
         <div
-          class="splide"
+          class="splide fade animate__animated"
           id="main-carousel"
           aria-labelledby="carousel-heading"
         >
           <div class="splide__track">
             <ul class="splide__list" id="insert-datas">
               <li class="splide__slide">
-                <img src="./images/phoenix-1-w1200.jpg" alt="" />
+                <img src="./images/phoenix-1-w1200.jpg" alt="" loading="lazy" />
               </li>
               <li class="splide__slide">
-                <img src="./images/phoenix-2-w1200.jpg" alt="" />
+                <img src="./images/phoenix-2-w1200.jpg" alt="" loading="lazy" />
               </li>
               <li class="splide__slide">
-                <img src="./images/phoenix-3-w1200.jpg" alt="" />
+                <img src="./images/phoenix-3-w1200.jpg" alt="" loading="lazy" />
               </li>
               <li class="splide__slide">
-                <img src="./images/phoenix-4-w1200.jpg" alt="" />
+                <img src="./images/phoenix-4-w1200.jpg" alt="" loading="lazy" />
               </li>
               <li class="splide__slide">
-                <img src="./images/phoenix-5-w1200.jpg" alt="" />
+                <img src="./images/phoenix-5-w1200.jpg" alt="" loading="lazy" />
               </li>
             </ul>
           </div>
@@ -184,7 +193,7 @@
       </section>
 
       <!--début présentation-->
-      <section id="presentation" class="center column">
+      <section id="presentation" id="testpres" class="center column">
         <div class="bg-filter">
           <div class="center column">
             <h2 class="titre-white animate__animated">Gilian</h2>
@@ -208,13 +217,28 @@
           </div>
           <div id="presentation-images">
             <div class="polaroid">
-              <img src="./images/gilian-1-w800.jpg" alt="" />
+              <img
+                src="./images/gilian-1-w800.jpg"
+                alt=""
+                loading="lazy"
+                class="fade animate__animated"
+              />
             </div>
             <div class="polaroid">
-              <img src="./images/gilian-2-w800.jpg" alt="" />
+              <img
+                src="./images/gilian-2-w800.jpg"
+                alt=""
+                loading="lazy"
+                class="fade animate__animated"
+              />
             </div>
             <div class="polaroid">
-              <img src="./images/gilian-3-w800.jpg" alt="" />
+              <img
+                src="./images/gilian-3-w800.jpg"
+                alt=""
+                loading="lazy"
+                class="fade animate__animated"
+              />
             </div>
           </div>
         </div>
@@ -227,7 +251,7 @@
         <div id="email" class="center column">
           <picture>
             <source media="(min-width: )" srcset="" />
-            <img src="./images/email.png" alt="" />
+            <img src="./images/email.png" alt="" loading="lazy" />
           </picture>
           <a href="mailto : contact@gilian-officiel.com ">
             <p>contact@gilian-officiel.com</p>
@@ -242,14 +266,29 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/youtube-128.png" alt=""
-          /></a>
+            <img
+              src="./images/youtube-128.png"
+              alt=""
+              loading="lazy"
+              class="fade animate__animated"
+            />
+          </a>
         </div>
         <div class="icon-social">
-          <img src="./images/instagram-128.png" alt="" />
+          <img
+            src="./images/instagram-128.png"
+            alt=""
+            loading="lazy"
+            class="fade animate__animated"
+          />
         </div>
         <div class="icon-social">
-          <img src="./images/facebook-128.png" alt="" />
+          <img
+            src="./images/facebook-128.png"
+            alt=""
+            loading="lazy"
+            class="fade animate__animated"
+          />
         </div>
       </div>
       <div id="copyright">

@@ -52,6 +52,23 @@ footer p {
   width: 15vw;
 }
 
+.splide__arrow {
+  font-size: 1rem;
+  top: unset;
+  bottom: -4rem;
+}
+
+.splide__pagination {
+  bottom: -2.5rem;
+}
+
+#galerie .splide {
+  margin-bottom: 20%;
+}
+#clips .splide {
+  margin-bottom: 20%;
+}
+
 @media all and (orientation: landscape) {
   .navbar {
     height: 60px;

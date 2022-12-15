@@ -25,10 +25,10 @@ document.documentElement.style.setProperty(
 new Splide('#main-carousel', {
   type: 'fade',
   rewind: true,
-  padding: '3rem',
+  padding: '8rem',
   width: '75vw',
   breakpoints: {
-    800: {
+    1000: {
       width: '100vw',
       padding: '0',
     },
@@ -39,10 +39,10 @@ new Splide('#main-carousel', {
 new Splide('#video-slides', {
   type: 'fade',
   rewind: true,
-  padding: '3rem',
+  padding: '8rem',
   width: '75vw',
   breakpoints: {
-    800: {
+    1000: {
       padding: '0',
       width: '100vw',
     },
@@ -52,7 +52,7 @@ new Splide('#video-slides', {
   },
 }).mount(window.splide.Extensions);
 
-// add class on title h2
+// add class for animate on title h2
 const elementsToLoadIn = new Set([
   ...document.querySelectorAll('#event h2'),
   ...document.querySelectorAll('#clips h2'),
@@ -67,7 +67,7 @@ const observerOptions = {
   threshold: 0,
 };
 
-function observerCallback(entries) {
+function observerFlipInX(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('animate__flipInX');
@@ -77,5 +77,23 @@ function observerCallback(entries) {
   });
 }
 
-const observer = new IntersectionObserver(observerCallback, observerOptions);
+const observer = new IntersectionObserver(observerFlipInX, observerOptions);
+
 elementsToLoadIn.forEach(el => observer.observe(el));
+
+// add animate fadin for slider
+
+const elementsToLoadIn2 = new Set([...document.querySelectorAll('.fade')]);
+
+function observerFadIn(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate__fadeIn');
+    } else {
+      entry.target.classList.remove('animate__fadeIn');
+    }
+  });
+}
+
+const observer2 = new IntersectionObserver(observerFadIn, observerOptions);
+elementsToLoadIn2.forEach(el => observer2.observe(el));

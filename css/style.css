@@ -197,3 +197,18 @@ p {
 #galerie .splide {
   margin-bottom: 8%;
 }
+
+/* style button slider */
+
+.splide__arrow {
+  font-size: 2rem;
+}
+
+.splide__pagination {
+  bottom: -2rem;
+}
+
+#main-carousel .splide__pagination__page.is-active {
+  opacity: 0.2;
+  background-color: #090f17;
+}
