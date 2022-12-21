@@ -82,9 +82,7 @@ const observer = new IntersectionObserver(observerFlipInX, observerOptions);
 elementsToLoadIn.forEach(el => observer.observe(el));
 
 // add animate fadin for slider
-
 const elementsToLoadIn2 = new Set([...document.querySelectorAll('.fade')]);
-
 function observerFadIn(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -97,3 +95,26 @@ function observerFadIn(entries) {
 
 const observer2 = new IntersectionObserver(observerFadIn, observerOptions);
 elementsToLoadIn2.forEach(el => observer2.observe(el));
+
+// hide email
+
+const email = document.getElementById('email-contact');
+
+const part1 = 'contact';
+const part2 = Math.pow(2, 6);
+const part3 = String.fromCharCode(part2);
+const part4 = 'gilian-officiel.com';
+const part5 = part1 + String.fromCharCode(part2) + part4;
+
+const emailResult =
+  '<a href=' +
+  'mai' +
+  'lto' +
+  ':' +
+  part5 +
+  '>' +
+  part1 +
+  part3 +
+  part4 +
+  '</a>';
+email.insertAdjacentHTML('afterbegin', emailResult);
