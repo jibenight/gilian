@@ -1,0 +1,10 @@
+# ignore les fichiers systems en local
+/node_modules
+
+# ignore fichier racine mac os 
+.DS_Store
+
+
+# ignore le dossier dist
+/dist
+/.parcel-cache

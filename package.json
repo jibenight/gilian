@@ -1,0 +1,15 @@
+{
+  "name": "gilian-officiel",
+  "author": "Jean and Alexandra",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.2"
+  },
+  "dependencies": {
+    "@splidejs/splide-extension-video": "^0.8.0"
+  }
+}
