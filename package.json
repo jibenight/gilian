@@ -10,6 +10,7 @@
     "parcel": "^2.8.2"
   },
   "dependencies": {
-    "@splidejs/splide-extension-video": "^0.8.0"
+    "@splidejs/splide-extension-video": "^0.8.0",
+    "animate.css": "^4.1.1"
   }
 }
