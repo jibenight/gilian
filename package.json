@@ -13,6 +13,7 @@
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-video": "^0.8.0",
     "animate.css": "^4.1.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "html": "^1.0.0"
   }
 }
