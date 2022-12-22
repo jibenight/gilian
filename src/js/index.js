@@ -1,3 +1,9 @@
+import Splide from '@splidejs/splide';
+import { Video } from '@splidejs/splide-extension-video';
+import '@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css';
+import '@splidejs/splide/dist/css/splide.min.css';
+import 'animate.css';
+
 // js for menu
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -50,7 +56,7 @@ new Splide('#video-slides', {
   video: {
     loop: true,
   },
-}).mount(window.splide.Extensions);
+}).mount({ Video });
 
 // add class for animate on title h2
 const elementsToLoadIn = new Set([
@@ -76,9 +82,7 @@ function observerFlipInX(entries) {
     }
   });
 }
-
 const observer = new IntersectionObserver(observerFlipInX, observerOptions);
-
 elementsToLoadIn.forEach(el => observer.observe(el));
 
 // add animate fadin for slider
@@ -92,14 +96,11 @@ function observerFadIn(entries) {
     }
   });
 }
-
 const observer2 = new IntersectionObserver(observerFadIn, observerOptions);
 elementsToLoadIn2.forEach(el => observer2.observe(el));
 
 // hide email
-
 const email = document.getElementById('email-contact');
-
 const part1 = 'contact';
 const part2 = Math.pow(2, 6);
 const part3 = String.fromCharCode(part2);
