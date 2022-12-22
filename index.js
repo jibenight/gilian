@@ -16,13 +16,6 @@ app.get('/', (request, response) => {
   response.render('index.html');
 });
 
-//error 404
-if (error404) {
-  app.use(function (request, response) {
-    response.status(404).sendFile(path.join(__dirname, folder, '404.html'));
-  });
-}
-
 if (typeof PhusionPassenger !== 'undefined') {
   app.listen('passenger');
 } else {
