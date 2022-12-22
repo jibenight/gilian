@@ -12,9 +12,9 @@ let error404 = true;
 
 app.use(express.static(path.join(__dirname, folder)));
 //render index.html page
-app.get('/', (request, response) => {
-  response.render('index.html');
-});
+// app.get('/', (request, response) => {
+//   response.render('index.html');
+// });
 
 if (typeof PhusionPassenger !== 'undefined') {
   app.listen('passenger');
