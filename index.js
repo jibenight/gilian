@@ -9,11 +9,10 @@ const app = express();
 const port = 3000;
 
 app.use(express.static(path.join(__dirname, 'dist')));
-//render index.html page
-app.get('/', (request, response) => {
-  response.sendFile('index.html');
-});
 
+app.get('/', (req, res) => {
+  res.send('index.html');
+});
 if (typeof PhusionPassenger !== 'undefined') {
   app.listen('passenger');
 } else {
