@@ -1,9 +1,9 @@
-var http = require('http');
-var server = http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    var message = 'It works!\n',
-        version = 'NodeJS ' + process.versions.node + '\n',
-        response = [message, version].join('\n');
-    res.end(response);
+const http = require('http');
+const fs = require('fs');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'content-type': 'text/html' });
+  fs.createReadStream('./dist/index.html').pipe(res);
 });
+
 server.listen();
