@@ -11,7 +11,7 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'dist')));
 //render index.html page
 app.get('/', (request, response) => {
-  response.render('index.html');
+  response.sendFile('index.html');
 });
 
 if (typeof PhusionPassenger !== 'undefined') {
