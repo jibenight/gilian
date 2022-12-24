@@ -6,5 +6,4 @@
 
 
 # ignore le dossier dist
-/dist
 /.parcel-cache

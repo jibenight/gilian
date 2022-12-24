@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cljp8934/repositories/gilian
+    - /bin/cp -R images $DEPLOYPATH

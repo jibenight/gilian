@@ -1,0 +1,207 @@
+@font-face {
+  font-family: quantify;
+  src: url("Quantify.75040f9c.ttf");
+}
+
+@font-face {
+  font-family: louis george cafe;
+  src: url("Louis-George-Cafe.87ce7f55.ttf");
+}
+
+:root {
+  --titre-white: #e7e7e7;
+  --titre-black: #090f17;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 99px);
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: louis george cafe;
+  font-size: 1.4em;
+}
+
+h1 {
+  color: var(--titre-white);
+  text-align: center;
+  font-family: quantify;
+  font-size: 14em;
+  line-height: 1em;
+}
+
+h2 {
+  font-family: quantify;
+}
+
+h3, h4 {
+  font-family: louis george cafe;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+.titre-white {
+  color: var(--titre-white);
+  text-transform: uppercase;
+  font-size: 5vw;
+}
+
+.titre-black {
+  color: var(--titre-black);
+  text-transform: uppercase;
+  font-size: 5vw;
+}
+
+.bg-filter {
+  width: 100%;
+  height: 100%;
+  background-color: #000000b3;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.content-white {
+  color: var(--titre-white);
+}
+
+.animate__fadeIn {
+  --animate-duration: 2s;
+}
+
+#event {
+  min-height: 540px;
+  padding-bottom: 5%;
+}
+
+#event :nth-child(2) .center {
+  text-align: center;
+  margin: 2%;
+}
+
+#event img {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  box-shadow: 0 3px 8px #0000003d;
+}
+
+#presentation {
+  background: url("background-gilian.e687f085.jpg") center / cover no-repeat fixed;
+  align-items: center;
+}
+
+#presentation img {
+  height: 35vh;
+}
+
+#presentation p {
+  text-align: center;
+  padding: 0 4% 2%;
+}
+
+#presentation-images {
+  justify-content: center;
+  display: flex;
+}
+
+#presatation-images #galerie {
+  min-height: 500px;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+.polaroid img {
+  background-color: #e7e7e7;
+  padding: 15px 15px 40px;
+}
+
+.polaroid {
+  margin: 5%;
+}
+
+.polaroid:nth-child(1) {
+  transform: rotate(4deg);
+}
+
+.polaroid:nth-child(2) {
+  transform: rotate(-3deg);
+}
+
+.polaroid:nth-child(3) {
+  transform: rotate(9deg);
+}
+
+#clips {
+  background: url("back2.0e2c5bc1.jpg") center / cover no-repeat fixed;
+}
+
+#clips h3 {
+  color: var(--titre-white);
+  text-align: center;
+}
+
+#clips p {
+  color: var(--titre-white);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#clips .splide {
+  margin-bottom: 8%;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.splide__slide {
+  opacity: .6;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+}
+
+#main-carousel {
+  margin: 10px;
+}
+
+#galerie .splide {
+  margin-bottom: 8%;
+}
+
+.splide__arrow {
+  font-size: 1.5rem;
+}
+
+.splide__pagination {
+  bottom: -2rem;
+}
+
+#main-carousel .splide__pagination__page.is-active {
+  opacity: .2;
+  background-color: #090f17;
+}
+
+/*# sourceMappingURL=index.c92073ef.css.map */
