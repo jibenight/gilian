@@ -3,6 +3,7 @@ import { Video } from '@splidejs/splide-extension-video';
 import '@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css';
 import '@splidejs/splide/dist/css/splide.min.css';
 import 'animate.css';
+import { dataClips } from '../../data';
 
 // js for menu
 const hamburger = document.querySelector('.hamburger');
@@ -83,7 +84,9 @@ function observerFlipInX(entries) {
   });
 }
 const observer = new IntersectionObserver(observerFlipInX, observerOptions);
-elementsToLoadIn.forEach(el => observer.observe(el));
+if (window.matchMedia('(max-width: 800px)').matches) {
+  elementsToLoadIn.forEach(el => observer.observe(el));
+}
 
 // add animate fadin for slider
 const elementsToLoadIn2 = new Set([...document.querySelectorAll('.fade')]);
@@ -97,7 +100,10 @@ function observerFadIn(entries) {
   });
 }
 const observer2 = new IntersectionObserver(observerFadIn, observerOptions);
-elementsToLoadIn2.forEach(el => observer2.observe(el));
+
+if (window.matchMedia('(max-width: 800px)').matches) {
+  elementsToLoadIn2.forEach(el => observer2.observe(el));
+}
 
 // hide email
 const email = document.getElementById('email-contact');
@@ -119,3 +125,7 @@ const emailResult =
   part4 +
   '</a>';
 email.insertAdjacentHTML('afterbegin', emailResult);
+
+for (const i of Object.entries(dataClips)) {
+  console.log(i[0][1]); // affiche 3, 5, 7 dans la console
+}

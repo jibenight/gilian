@@ -1,5 +1,5 @@
 h1 {
-  font-size: 30vw;
+  font-size: 28vw;
 }
 
 .titre-white {
@@ -64,6 +64,10 @@ footer p {
 
 #galerie .splide, #clips .splide {
   margin-bottom: 20%;
+}
+
+#email-contact {
+  font-size: 1.7rem;
 }
 
 @media (orientation: landscape) {

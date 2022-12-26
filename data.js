@@ -1,4 +1,4 @@
-const data = {
+export const dataClips = {
   clips: [
     ['https://www.youtube.com/watch?v=mhlj0ZNLjcI', 'vignette-video.jpg'],
     [
