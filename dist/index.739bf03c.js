@@ -605,7 +605,7 @@ function observerFlipInX(entries) {
     });
 }
 const observer = new IntersectionObserver(observerFlipInX, observerOptions);
-if (window.matchMedia("(max-width: 800px)").matches) elementsToLoadIn.forEach((el)=>observer.observe(el));
+elementsToLoadIn.forEach((el)=>observer.observe(el));
 // add animate fadin for slider
 const elementsToLoadIn2 = new Set([
     ...document.querySelectorAll(".fade")
@@ -617,7 +617,7 @@ function observerFadIn(entries) {
     });
 }
 const observer2 = new IntersectionObserver(observerFadIn, observerOptions);
-if (window.matchMedia("(max-width: 800px)").matches) elementsToLoadIn2.forEach((el)=>observer2.observe(el));
+elementsToLoadIn2.forEach((el)=>observer2.observe(el));
 // hide email
 const email = document.getElementById("email-contact");
 const part1 = "contact";
@@ -629,7 +629,7 @@ const emailResult = "<a href=mailto:" + part5 + ">" + part1 + part3 + part4 + "<
 email.insertAdjacentHTML("afterbegin", emailResult);
 for (const i of Object.entries((0, _data.dataClips)))console.log(i[0][1]); // affiche 3, 5, 7 dans la console
 
-},{"@splidejs/splide":"5CJev","@splidejs/splide-extension-video":"e4I1P","@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css":"g0nYl","@splidejs/splide/dist/css/splide.min.css":"1SEZe","animate.css":"8t3va","../../data":"5pclG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5CJev":[function(require,module,exports) {
+},{"@splidejs/splide":"5CJev","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@splidejs/splide-extension-video":"e4I1P","@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css":"g0nYl","@splidejs/splide/dist/css/splide.min.css":"1SEZe","animate.css":"8t3va","../../data":"5pclG"}],"5CJev":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CLASSES", ()=>CLASSES);

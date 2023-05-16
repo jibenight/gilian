@@ -70,6 +70,16 @@ footer p {
   font-size: 1.7rem;
 }
 
+.list-events {
+  flex-direction: column;
+  align-items: center;
+}
+
+#copyright {
+  padding: 2%;
+  font-size: 1rem;
+}
+
 @media (orientation: landscape) {
   .navbar {
     height: 60px;

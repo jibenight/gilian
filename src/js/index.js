@@ -84,9 +84,8 @@ function observerFlipInX(entries) {
   });
 }
 const observer = new IntersectionObserver(observerFlipInX, observerOptions);
-if (window.matchMedia('(max-width: 800px)').matches) {
-  elementsToLoadIn.forEach(el => observer.observe(el));
-}
+
+elementsToLoadIn.forEach(el => observer.observe(el));
 
 // add animate fadin for slider
 const elementsToLoadIn2 = new Set([...document.querySelectorAll('.fade')]);
@@ -101,9 +100,7 @@ function observerFadIn(entries) {
 }
 const observer2 = new IntersectionObserver(observerFadIn, observerOptions);
 
-if (window.matchMedia('(max-width: 800px)').matches) {
-  elementsToLoadIn2.forEach(el => observer2.observe(el));
-}
+elementsToLoadIn2.forEach(el => observer2.observe(el));
 
 // hide email
 const email = document.getElementById('email-contact');

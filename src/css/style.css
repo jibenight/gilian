@@ -8,8 +8,8 @@
 }
 
 :root {
-  --titre-white: #e7e7e7;
-  --titre-black: #090f17;
+  --titre-white: #4b6075;
+  --titre-black: #b3def1;
 }
 
 /**
@@ -35,7 +35,7 @@ body {
 
 h1 {
   font-family: 'quantify';
-  color: var(--titre-white);
+  color: var(--titre-black);
   font-size: 14em;
   line-height: 1em;
   text-align: center;
@@ -81,7 +81,7 @@ p {
 }
 
 .content-white {
-  color: var(--titre-white);
+  color: white;
 }
 
 .animate__fadeIn {
@@ -104,6 +104,16 @@ p {
   height: 150px;
   border-radius: 75px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.list-events {
+  display: flex;
+  justify-content: center;
+}
+
+.card-events {
+  width: 80%;
+  height: 80%;
 }
 
 /* style for présentation  */
@@ -211,4 +221,9 @@ p {
 #main-carousel .splide__pagination__page.is-active {
   opacity: 0.2;
   background-color: #090f17;
+}
+
+.mention {
+  width: 80%r;
+  margin: 5%;
 }
