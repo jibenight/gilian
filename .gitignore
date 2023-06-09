@@ -7,3 +7,7 @@
 
 # ignore le dossier dist
 /.parcel-cache
+
+
+# production file
+dist
